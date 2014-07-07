@@ -12,6 +12,10 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<spark.version>1.0.0</spark.version>
+		<hadoop.version>2.2.0</hadoop.version>
+		<hbase.version>0.96.2-hadoop2</hbase.version>
+
 	</properties>
 
 	<repositories>
@@ -50,31 +54,54 @@
 
 
 	<dependencies>
-		<!-- (...) -->
-		<dependency> <!-- Spark dependency -->
+	
+		<!-- Spark dependency -->
+		<dependency> 
 			<groupId>org.apache.spark</groupId>
 			<artifactId>spark-core_2.10</artifactId>
-			<version>1.0.0</version>
+			<version>${spark.version}</version>
 		</dependency>
 
 		<dependency>
 			<groupId>org.apache.spark</groupId>
 			<artifactId>spark-streaming_2.10</artifactId>
-			<version>1.0.0</version>
+			<version>${spark.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.spark</groupId>
 			<artifactId>spark-mllib_2.10</artifactId>
-			<version>1.0.0</version>
+			<version>${spark.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.spark</groupId>
 			<artifactId>spark-sql_2.10</artifactId>
-			<version>1.0.0</version>
+			<version>${spark.version}</version>
 		</dependency>
+		<!-- end Spark dependency -->
 
 
-
+		<!-- hbase -->
+		<dependency>
+			<groupId>org.apache.hbase</groupId>
+			<artifactId>hbase-server</artifactId>
+			<version>${hbase.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.hbase</groupId>
+			<artifactId>hbase-client</artifactId>
+			<version>${hbase.version}</version>
+		</dependency>		
+		<dependency>
+			<groupId>org.apache.hbase</groupId>
+			<artifactId>hbase-common</artifactId>
+			<version>${hbase.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.hbase</groupId>
+			<artifactId>hbase-protocol</artifactId>
+			<version>${hbase.version}</version>
+		</dependency>		
+		<!-- end hbase -->
 
 	</dependencies>
 

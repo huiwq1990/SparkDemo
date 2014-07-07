@@ -86,6 +86,7 @@ public final class JavaLogQuery {
         return new Tuple3<String, String, String>(ip, user, query);
       }
     }
+    
     return new Tuple3<String, String, String>(null, null, null);
   }
 
